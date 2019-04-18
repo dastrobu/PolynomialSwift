@@ -5,8 +5,8 @@
 /// see https://stackoverflow.com/a/26679191/1458343
 fileprivate extension RandomAccessCollection where Element: Comparable, Index == Int {
     func insertionIndexOf(_ elem: Element) -> Index {
-        var lo: Index = 0
-        var hi: Index = self.count - 1
+        var lo: Index = self.startIndex
+        var hi: Index = self.endIndex
         while lo <= hi {
             let mid = (lo + hi) / 2
             if self[mid] < elem {
