@@ -11,7 +11,7 @@ internal extension RandomAccessCollection where Element: Comparable, Index == In
     /// see https://stackoverflow.com/a/26679191/1458343
     func insertionIndexOf(_ x: Element) -> Index {
         var lo: Index = self.startIndex
-        if isEmpty || x < first! {
+        if isEmpty || x < self[lo] {
             return startIndex - 1
         }
         var hi: Index = self.endIndex - 1
@@ -30,11 +30,14 @@ internal extension RandomAccessCollection where Element: Comparable, Index == In
 
     /// return the indices of the elements between which the new element should be inserted
     /// if the element cannot be inserted between two existent elements, without breaking the order of the array,
-    /// nil is returned. This happens, when the element is smaller than the first element, or larger or equal to the
+    /// nil is returned. This happens, when the element is smaller than the first element, or larger than the
     /// last element of the array.
-    func insertBetween(_ x: Element) -> (left: Index, right: Index)? {
+    func insertionBetween(_ x: Element) -> (left: Index, right: Index)? {
         let k = insertionIndexOf(x)
-        if k >= self.startIndex && k < endIndex - 1 {
+        if k > self.startIndex && k < endIndex {
+            return (left: k - 1, right: k)
+        }
+        if k == self.startIndex && self.startIndex != self.endIndex {
             return (left: k, right: k + 1)
         }
         return nil
@@ -84,7 +87,7 @@ open class PiecewisePolynomial<T> where T: FloatingPoint {
         if x == last {
             return (left: breakpoints.count - 2, breakpoints.count - 1)
         }
-        return breakpoints.insertBetween(x)
+        return breakpoints.insertionBetween(x)
     }
 
     /// evaluate piecewise polynomial, any value outside the breakpoints will evaluate to nan, see FloatingPoint.nan.
@@ -115,7 +118,7 @@ open class PiecewisePolynomial<T> where T: FloatingPoint {
                     // if x is ordered, search for the next interval on the remaining breakpoints
                     if xi > x[i - 1] && xi < lastBreakpoint {
                         // do ordered, search on the remaining breakpoints only
-                        intervalBounds = breakpoints[lastBounds.right..<breakpoints.count].insertBetween(xi)
+                        intervalBounds = breakpoints[lastBounds.right...].insertionBetween(xi)
                     }
                     // if x is unordered, not strictly increasing or xi falls on the last breakpoint start over
                     else {
@@ -139,6 +142,7 @@ open class PiecewisePolynomial<T> where T: FloatingPoint {
             assert(interval.count == 1, "\(interval.count) == 1")
             y.append(T.nan)
         }
+        assert(x.count == y.count, "\(x.count) == \(y.count)")
         return y
     }
 
