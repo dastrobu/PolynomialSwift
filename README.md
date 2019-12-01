@@ -7,6 +7,9 @@ Polynomials and Piecewise Polynomials in Swift.
      * [Swift Package Manager](#swift-package-manager)
      * [Cocoa Pods](#cocoa-pods)
      * [Dependencies](#dependencies)
+  * [Features](#features)
+     * [Planned](#planned)
+  * [Docs](#docs)
 
 ## Installation
 
@@ -30,3 +33,7 @@ Depends on Accelerate and hence only runs on macOS
 ### Planned
  - Integrals
  - Root finding
+ 
+## Docs
+
+Read the generated [docs](https://dastrobu.github.io/PolynomialSwift/)
