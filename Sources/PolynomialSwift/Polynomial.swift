@@ -1,9 +1,6 @@
-//
-// Created by Daniel Strobusch on 2019-04-18.
-//
-
 import Accelerate
 
+/// Class representing a polynomial.
 open class Polynomial<T>:
     ExpressibleByArrayLiteral,
     CustomDebugStringConvertible

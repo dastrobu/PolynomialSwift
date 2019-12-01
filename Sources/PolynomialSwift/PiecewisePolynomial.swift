@@ -1,7 +1,3 @@
-//
-// Created by Daniel Strobusch on 2019-04-18.
-//
-
 internal extension RandomAccessCollection where Element: Comparable, Index == Int {
     /// find the insertion index of a new element in a sorted collection.
     /// if the collection is empty, startIndex - 1 is returned
@@ -54,6 +50,7 @@ fileprivate extension Array where Element: FloatingPoint {
     }
 }
 
+/// Class representing a piecewise polynomial.
 open class PiecewisePolynomial<T> where T: FloatingPoint {
     public let polynomials: [Polynomial<T>]
     public let breakpoints: [T]
