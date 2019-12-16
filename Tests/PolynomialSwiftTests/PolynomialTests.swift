@@ -59,4 +59,3 @@ final class PolynomialTests: XCTestCase {
         XCTAssertEqual(Polynomial<Float>(coefficients: [2, 3], x0: 3).evaluate([1, 2]), [-4, -1])
     }
 }
-

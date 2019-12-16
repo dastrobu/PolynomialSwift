@@ -1,9 +1,7 @@
 import Accelerate
 
 /// Class representing a polynomial.
-open class Polynomial<T>:
-    ExpressibleByArrayLiteral,
-    CustomDebugStringConvertible
+open class Polynomial<T>: ExpressibleByArrayLiteral, CustomDebugStringConvertible
     where T: FloatingPoint {
     public let coefficients: [T]
     public let x0: T
@@ -50,7 +48,7 @@ open class Polynomial<T>:
         self.x0 = x0
     }
 
-    public init(coefficients: Array<T>, x0: T = 0) {
+    public init(coefficients: [T], x0: T = 0) {
         self.coefficients = coefficients
         self.x0 = x0
     }
@@ -103,7 +101,7 @@ public extension Polynomial where T == Double {
         let xx = x.map {
             $0 - x0
         }
-        var c = Array<T>(repeating: 0, count: x.count)
+        var c = [T](repeating: 0, count: x.count)
         coefficients.withUnsafeBufferPointer { p in
             vDSP_vpolyD(p.baseAddress! + degree, -1, xx, 1, &c, 1, vDSP_Length(x.count), vDSP_Length(degree))
         }
@@ -124,7 +122,7 @@ public extension Polynomial where T == Float {
         let xx = x.map {
             $0 - x0
         }
-        var c = Array<T>(repeating: 0, count: x.count)
+        var c = [T](repeating: 0, count: x.count)
         coefficients.withUnsafeBufferPointer { p in
             vDSP_vpoly(p.baseAddress! + degree, -1, xx, 1, &c, 1, vDSP_Length(x.count), vDSP_Length(degree))
         }

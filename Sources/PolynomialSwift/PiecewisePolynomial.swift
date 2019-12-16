@@ -92,7 +92,7 @@ open class PiecewisePolynomial<T> where T: FloatingPoint {
     fileprivate func evaluate(_ x: [T], evaluator: @escaping (Polynomial<T>, [T]) -> [T]) -> [T] {
         guard let lastBreakpoint = breakpoints.last else {
             // handle empty piecewise polynomial
-            return Array<T>(repeating: T.nan, count: x.count)
+            return [T](repeating: T.nan, count: x.count)
         }
 
         // handle first point
