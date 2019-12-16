@@ -8,7 +8,7 @@ open class Polynomial<T>: ExpressibleByArrayLiteral, CustomDebugStringConvertibl
 
     /// Degree of the polynomial, i.e. number of coefficients - 1
     /// If coefficients are empty, degree is -1.
-    /// - SeeAlso: trimmedDegree
+    /// - SeeAlso: `trimmedDegree(...)`
     public var degree: Int {
         return coefficients.count - 1
     }
@@ -16,7 +16,7 @@ open class Polynomial<T>: ExpressibleByArrayLiteral, CustomDebugStringConvertibl
     /// Trimmed degree of the polynomial,
     /// i.e. number of coefficients - 1 without trailing coefficients ci where |ci| < tol.
     /// If coefficients are empty, degree is -1.
-    /// - SeeAlso: trimmed()
+    /// - SeeAlso: `trimmed(...)`
     public func trimmedDegree(tol: T = 0) -> Int {
         assert(tol >= 0, "\(tol) >= 0")
         if coefficients.isEmpty {
@@ -34,7 +34,7 @@ open class Polynomial<T>: ExpressibleByArrayLiteral, CustomDebugStringConvertibl
     /// Trimmed polynomial,
     /// i.e. coefficients are trimmed where trailing coefficients |ci| < tol.
     /// If coefficients are empty, degree is 0.
-    /// - SeeAlso: trimmedDegree()
+    /// - SeeAlso: trimmedDegree(...)
     public func trimmed(tol: T = 0) -> Polynomial<T> {
         let d = trimmedDegree(tol: tol)
         if d == -1 {
