@@ -16,56 +16,56 @@
     },
     {
       "file": "/Users/ds/code/swift/PolynomialSwift/Sources/PolynomialSwift/Polynomial.swift",
-      "line": 8,
+      "line": 6,
       "symbol": "Polynomial.coefficients",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ds/code/swift/PolynomialSwift/Sources/PolynomialSwift/Polynomial.swift",
-      "line": 9,
+      "line": 7,
       "symbol": "Polynomial.x0",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ds/code/swift/PolynomialSwift/Sources/PolynomialSwift/Polynomial.swift",
-      "line": 48,
+      "line": 46,
       "symbol": "Polynomial.init(coefficients:x0:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ds/code/swift/PolynomialSwift/Sources/PolynomialSwift/Polynomial.swift",
-      "line": 53,
+      "line": 51,
       "symbol": "Polynomial.init(coefficients:x0:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ds/code/swift/PolynomialSwift/Sources/PolynomialSwift/Polynomial.swift",
-      "line": 94,
+      "line": 92,
       "symbol": "Polynomial.evaluate(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ds/code/swift/PolynomialSwift/Sources/PolynomialSwift/Polynomial.swift",
-      "line": 98,
+      "line": 96,
       "symbol": "Polynomial.evaluate(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ds/code/swift/PolynomialSwift/Sources/PolynomialSwift/Polynomial.swift",
-      "line": 115,
+      "line": 113,
       "symbol": "Polynomial.evaluate(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/ds/code/swift/PolynomialSwift/Sources/PolynomialSwift/Polynomial.swift",
-      "line": 119,
+      "line": 117,
       "symbol": "Polynomial.evaluate(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
