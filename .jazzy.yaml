@@ -1,0 +1,2 @@
+module: PolynomialSwift
+swift_build_tool: spm

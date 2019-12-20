@@ -1,4 +1,6 @@
 # PolynomialSwift
+[![documentation](docs/badge.svg)](https://dastrobu.github.io/PolynomialSwift/)
+
 Polynomials and Piecewise Polynomials in Swift.
 
 ## Table of Contents
