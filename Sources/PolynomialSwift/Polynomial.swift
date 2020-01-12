@@ -43,26 +43,31 @@ open class Polynomial<T>: ExpressibleByArrayLiteral, CustomDebugStringConvertibl
         return Polynomial(coefficients: coefficients[0...d], x0: x0)
     }
 
+    /// create new polynomial with coefficients c[i] where polynomial is given by
+    /// p(x) = sum_i x^i * c[i] = c[0] + x * c[1] + x^2 * c[2] + ...
     public init(coefficients: ArraySlice<T>, x0: T = 0) {
         self.coefficients = Array(coefficients)
         self.x0 = x0
     }
 
+    /// create new polynomial with coefficients c[i] and shift x0 where polynomial is given by
+    /// p(x) = sum_i (x - x0)^i * c[i] = c[0] + (x - x0) * c[1] + (x - x0)^2 * c[2] + ...
     public init(coefficients: [T], x0: T = 0) {
         self.coefficients = coefficients
         self.x0 = x0
     }
 
+    /// convenience initializer to express polynomial by literal
     public required convenience init(arrayLiteral elements: T...) {
         self.init(coefficients: elements)
     }
 
     /// return the mth derivative of the polynomial
-    /// If the polynomial is empty, computing the derivative has no effect
+    /// If the polynomial is empty, an empty polynomial is returned.
     public func derivative(_ m: Int = 1) -> Polynomial<T> {
         assert(m >= 0, "\(m) >= 0")
         if m == 0 || coefficients.isEmpty {
-            return self
+            return Polynomial(coefficients: [], x0: x0)
         }
 
         let degree = self.degree
@@ -88,11 +93,14 @@ open class Polynomial<T>: ExpressibleByArrayLiteral, CustomDebugStringConvertibl
     }
 }
 
+/// extension for polynomial with double precision elements
 public extension Polynomial where T == Double {
+    /// evaluate polynomial at a single point x
     func evaluate(_ x: T) -> T {
         return evaluate([x])[0]
     }
 
+    /// evaluate polynomial at an array of points
     func evaluate(_ x: [T]) -> [T] {
         if coefficients.isEmpty {
             return Array(repeating: T.nan, count: x.count)
@@ -109,11 +117,14 @@ public extension Polynomial where T == Double {
     }
 }
 
+/// extension for polynomial with single precision elements
 public extension Polynomial where T == Float {
+    /// evaluate polynomial at a single point x
     func evaluate(_ x: T) -> T {
         return evaluate([x])[0]
     }
 
+    /// evaluate polynomial at an array of points
     func evaluate(_ x: [T]) -> [T] {
         if coefficients.isEmpty {
             return Array(repeating: T.nan, count: x.count)
