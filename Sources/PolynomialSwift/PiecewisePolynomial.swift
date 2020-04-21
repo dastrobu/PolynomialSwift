@@ -143,8 +143,7 @@ open class PiecewisePolynomial<T> where T: FloatingPoint {
         return y
     }
 
-    /// return the mth derivative of the polynomial
-    /// If the polynomial is empty, computing the derivative has no effect
+    /// return the mth derivative of the piecewise polynomial
     public func derivative(_ m: Int = 1) -> PiecewisePolynomial<T> {
         return PiecewisePolynomial(polynomials: polynomials.map {
             $0.derivative(m)
@@ -152,6 +151,7 @@ open class PiecewisePolynomial<T> where T: FloatingPoint {
     }
 }
 
+/// extension for piecewise polynomials with single precision elements
 public extension PiecewisePolynomial where T == Double {
     /// evaluate piecewise polynomial, any value outside the breakpoints will evaluate to nan, see FloatingPoint.nan.
     func evaluate(_ x: T) -> T {
@@ -167,6 +167,7 @@ public extension PiecewisePolynomial where T == Double {
     }
 }
 
+/// extension for piecewise polynomials with double precision elements
 public extension PiecewisePolynomial where T == Float {
     /// evaluate piecewise polynomial, any value outside the breakpoints will evaluate to nan, see FloatingPoint.nan.
     func evaluate(_ x: T) -> T {
