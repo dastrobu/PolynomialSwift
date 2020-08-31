@@ -41,4 +41,4 @@ Depends on Accelerate and hence only runs on macOS
  
 ## Docs
 
-Read the generated [docs](https://dastrobu.github.io/PolynomialSwift/)
+Read the generated [docs](https://dastrobu.github.io/PolynomialSwift/).

@@ -8,13 +8,21 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Class/Polynomial" class="dashAnchor"></a>
     <a title="Polynomial Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">PolynomialSwift Docs</a> (86% documented)</p>
+        <p><a href="../index.html">PolynomialSwift Docs</a> (85% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -46,6 +54,7 @@
             <h1>Polynomial</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">Polynomial</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">ExpressibleByArrayLiteral</span><span class="p">,</span> <span class="kt">CustomDebugStringConvertible</span>
     <span class="k">where</span> <span class="kt">T</span><span class="p">:</span> <span class="kt">FloatingPoint</span></code></pre>
 
@@ -149,7 +158,7 @@ If coefficients are empty, degree is -1.</p>
                     <code>
                     <a name="/s:15PolynomialSwift0A0C13trimmedDegree3tolSix_tF"></a>
                     <a name="//apple_ref/swift/Method/trimmedDegree(tol:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15PolynomialSwift0A0C13trimmedDegree3tolSix_tF">trimmedDegree(tol:)</a>
+                    <a class="token" href="#/s:15PolynomialSwift0A0C13trimmedDegree3tolSix_tF">trimmedDegree(tol:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -183,7 +192,7 @@ If coefficients are empty, degree is -1.</p>
                     <code>
                     <a name="/s:15PolynomialSwift0A0C7trimmed3tolACyxGx_tF"></a>
                     <a name="//apple_ref/swift/Method/trimmed(tol:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15PolynomialSwift0A0C7trimmed3tolACyxGx_tF">trimmed(tol:)</a>
+                    <a class="token" href="#/s:15PolynomialSwift0A0C7trimmed3tolACyxGx_tF">trimmed(tol:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -217,7 +226,7 @@ If coefficients are empty, degree is 0.</p>
                     <code>
                     <a name="/s:15PolynomialSwift0A0C12coefficients2x0ACyxGs10ArraySliceVyxG_xtcfc"></a>
                     <a name="//apple_ref/swift/Method/init(coefficients:x0:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15PolynomialSwift0A0C12coefficients2x0ACyxGs10ArraySliceVyxG_xtcfc">init(coefficients:x0:)</a>
+                    <a class="token" href="#/s:15PolynomialSwift0A0C12coefficients2x0ACyxGs10ArraySliceVyxG_xtcfc">init(coefficients:<wbr>x0:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -245,7 +254,7 @@ p(x) = sum_i x^i * c[i] = c[0] + x * c[1] + x^2 * c[2] + &hellip;</p>
                     <code>
                     <a name="/s:15PolynomialSwift0A0C12coefficients2x0ACyxGSayxG_xtcfc"></a>
                     <a name="//apple_ref/swift/Method/init(coefficients:x0:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15PolynomialSwift0A0C12coefficients2x0ACyxGSayxG_xtcfc">init(coefficients:x0:)</a>
+                    <a class="token" href="#/s:15PolynomialSwift0A0C12coefficients2x0ACyxGSayxG_xtcfc">init(coefficients:<wbr>x0:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -273,7 +282,7 @@ p(x) = sum_i (x - x0)^i * c[i] = c[0] + (x - x0) * c[1] + (x - x0)^2 * c[2] + &h
                     <code>
                     <a name="/s:15PolynomialSwift0A0C12arrayLiteralACyxGxd_tcfc"></a>
                     <a name="//apple_ref/swift/Method/init(arrayLiteral:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15PolynomialSwift0A0C12arrayLiteralACyxGxd_tcfc">init(arrayLiteral:)</a>
+                    <a class="token" href="#/s:15PolynomialSwift0A0C12arrayLiteralACyxGxd_tcfc">init(arrayLiteral:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -300,7 +309,7 @@ p(x) = sum_i (x - x0)^i * c[i] = c[0] + (x - x0) * c[1] + (x - x0)^2 * c[2] + &h
                     <code>
                     <a name="/s:15PolynomialSwift0A0C10derivativeyACyxGSiF"></a>
                     <a name="//apple_ref/swift/Method/derivative(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15PolynomialSwift0A0C10derivativeyACyxGSiF">derivative(_:)</a>
+                    <a class="token" href="#/s:15PolynomialSwift0A0C10derivativeyACyxGSiF">derivative(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -352,13 +361,22 @@ If the polynomial is empty, an empty polynomial is returned.</p>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60T%60%20%3D%3D%20%60Double%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `T` == `Double`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60T%60%20%3D%3D%20%60Double%60"></a>
+                  <h3 class="section-name"><p>Available where <code>T</code> == <code>Double</code></p>
+</h3>
+                </div>
+              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
                     <a name="/s:15PolynomialSwift0A0CAASdRszrlE8evaluateyS2dF"></a>
                     <a name="//apple_ref/swift/Method/evaluate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15PolynomialSwift0A0CAASdRszrlE8evaluateyS2dF">evaluate(_:)</a>
+                    <a class="token" href="#/s:15PolynomialSwift0A0CAASdRszrlE8evaluateyS2dF">evaluate(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -385,7 +403,7 @@ If the polynomial is empty, an empty polynomial is returned.</p>
                     <code>
                     <a name="/s:15PolynomialSwift0A0CAASdRszrlE8evaluateySaySdGAEF"></a>
                     <a name="//apple_ref/swift/Method/evaluate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15PolynomialSwift0A0CAASdRszrlE8evaluateySaySdGAEF">evaluate(_:)</a>
+                    <a class="token" href="#/s:15PolynomialSwift0A0CAASdRszrlE8evaluateySaySdGAEF">evaluate(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -410,13 +428,22 @@ If the polynomial is empty, an empty polynomial is returned.</p>
               </ul>
             </div>
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60T%60%20%3D%3D%20%60Float%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `T` == `Float`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60T%60%20%3D%3D%20%60Float%60"></a>
+                  <h3 class="section-name"><p>Available where <code>T</code> == <code>Float</code></p>
+</h3>
+                </div>
+              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
                     <a name="/s:15PolynomialSwift0A0CAASfRszrlE8evaluateyS2fF"></a>
                     <a name="//apple_ref/swift/Method/evaluate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15PolynomialSwift0A0CAASfRszrlE8evaluateyS2fF">evaluate(_:)</a>
+                    <a class="token" href="#/s:15PolynomialSwift0A0CAASfRszrlE8evaluateyS2fF">evaluate(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -443,7 +470,7 @@ If the polynomial is empty, an empty polynomial is returned.</p>
                     <code>
                     <a name="/s:15PolynomialSwift0A0CAASfRszrlE8evaluateySaySfGAEF"></a>
                     <a name="//apple_ref/swift/Method/evaluate(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:15PolynomialSwift0A0CAASfRszrlE8evaluateySaySfGAEF">evaluate(_:)</a>
+                    <a class="token" href="#/s:15PolynomialSwift0A0CAASfRszrlE8evaluateySaySfGAEF">evaluate(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -470,8 +497,8 @@ If the polynomial is empty, an empty polynomial is returned.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-01-12)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.12.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-08-31)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
