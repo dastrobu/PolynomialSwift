@@ -2,8 +2,6 @@
 // Created by Daniel Strobusch on 2019-04-27.
 //
 
-@testable import PolynomialSwift
-
 import XCTest
 @testable import PolynomialSwift
 
