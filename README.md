@@ -1,6 +1,6 @@
 # PolynomialSwift
 
-[![Swift Version](https://img.shields.io/badge/swift-5.2-blue.svg)](https://swift.org) 
+[![Swift Version](https://img.shields.io/badge/swift-5.5-blue.svg)](https://swift.org) 
 ![Platform](https://img.shields.io/badge/platform-macOS-lightgray.svg)
 [![documentation](https://github.com/dastrobu/PolynomialSwift/raw/master/docs/badge.svg?sanitize=true)](https://dastrobu.github.io/PolynomialSwift/)
 
