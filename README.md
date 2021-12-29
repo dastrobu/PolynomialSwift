@@ -10,6 +10,13 @@ Polynomials and Piecewise Polynomials in Swift.
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Table of Contents
 
+- [Installation](#installation)
+  - [Swift Package Manager](#swift-package-manager)
+  - [Cocoa Pods](#cocoa-pods)
+  - [Dependencies](#dependencies)
+- [Features](#features)
+  - [Planned](#planned)
+- [Docs](#docs)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
